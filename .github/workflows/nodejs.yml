@@ -13,6 +13,7 @@ jobs:
         with:
           node-version: '14'
 
+      - run: yarn install
       - run: yarn run lint
       - run: yarn run test --runInBand --no-cache
         env:

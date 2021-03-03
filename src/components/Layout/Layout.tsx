@@ -3,6 +3,8 @@ import Helmet from 'react-helmet';
 import { useSiteMetadata } from '../../hooks';
 import styles from './Layout.module.scss';
 
+// import 'katex/dist/katex.min.css';
+
 type Props = {
   title: string,
   description?: string,

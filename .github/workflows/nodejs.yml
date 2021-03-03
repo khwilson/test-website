@@ -13,6 +13,14 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Pull cache if available
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: yarn-use-node-14-${{ hashFiles('**/*.lock') }}
+          restore-keys: |
+            yarn-use-node-14-
+
       - run: yarn install
       - run: yarn run lint
       - run: yarn run test --runInBand --no-cache
@@ -21,6 +29,9 @@ jobs:
 
       - name: Build the website after tests finish
         run: yarn build
+
+      - name: Add the CNAME
+        run: cp CNAME public
 
       - name: Push to GH Pages
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'

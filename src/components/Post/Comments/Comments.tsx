@@ -1,4 +1,5 @@
-import React from 'react';import ReactDisqusComments from 'react-disqus-comments';
+import React from 'react';
+import ReactDisqusComments from 'react-disqus-comments';
 import { useSiteMetadata } from '../../../hooks';
 
 type Props = {

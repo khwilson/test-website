@@ -3,7 +3,7 @@
 module.exports = {
   rootDir: '../',
   transform: {
-    '^.+\\.tsx?$': '<rootDir>/jest/jest-preprocess.js'
+    '^.+\\.[jt]sx?$': '<rootDir>/jest/jest-preprocess.js'
   },
   testMatch: ['**/__tests__/**/*.js', '**/?(*.)test.tsx'],
   moduleNameMapper: {

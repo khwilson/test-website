@@ -13,7 +13,7 @@ type Props = {
 };
 
 const PageTemplate: React.FC<Props> = ({ data }) => {
-const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
+  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
   const { html: pageBody } = data.markdownRemark;
   const { frontmatter } = data.markdownRemark;
   const { title: pageTitle, description: pageDescription = '', socialImage } = frontmatter;

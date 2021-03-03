@@ -1,4 +1,3 @@
-
 import { ICONS } from '../constants';
 
 const getIcon = (name: string) => {
